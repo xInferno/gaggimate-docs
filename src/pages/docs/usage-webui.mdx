@@ -1,0 +1,33 @@
+---
+layout: ../../layouts/Layout.astro
+title: Web Interface
+description: Using GaggiMate's WebUI
+section: Usage
+order: 17
+---
+
+import Preview from '../../components/Preview.astro';
+import img_01 from '../../assets/images/usage-webui/webui-dashboard.png';
+
+
+GaggiMate's WebUI can be accessed by visiting [http://gaggimate.local](http://gaggimate.local) in your web browser after [connecting GaggiMate to your local network](usage-first-start).
+
+### Dashboard
+
+The 'home page' for GaggiMate's WebUI is this dashboard screen:
+<div class="flex flex-row gap-4">
+  <Preview src={img_01} width={700} alt="" />
+</div>  
+
+Here you can see information about GaggiMate's current state, which updates in near-real-time as you make changes via GaggiMate's screen. 
+Information on this dashboard includes: 
+- GaggiMate's current operating mode (standby, brew, steam, etc)
+- The current temperature as measured at the boiler
+- The target temperature as set on the GaggiMate screen, and
+- A graph showing the current and target temperatures over time, including timestamps.
+
+### PID Autotune
+
+You can find more information about the PID Autotune feature [here](usage-autotune)
+
+### 

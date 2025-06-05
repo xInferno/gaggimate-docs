@@ -1,0 +1,43 @@
+---
+layout: ../../layouts/Layout.astro
+title: PID Autotune
+description: Getting the most out of GaggiMate's PID Controller
+section: Usage
+order: 18
+---
+
+import Preview from '../../components/Preview.astro';
+import img_01 from '../../assets/images/usage-webui/webui-autotune01.png';
+import img_02 from '../../assets/images/usage-webui/webui-autotune02.png';
+import img_03 from '../../assets/images/usage-webui/webui-autotune03.png';
+import img_04 from '../../assets/images/usage-webui/webui-autotune04.png';
+
+
+### PID Autotune
+
+Because every espresso machine is a little bit different, the values for the PID functionality within GaggiMate (which controls the temperature of the boiler) is set at a fairly safe default. However, it is highly recommended that you run the autotune procedure within GaggiMate in order to dial in the PID for your specific machine.
+
+You can do that using the PID Autotune section of the WebUI. Simply set a target temperature and a number of cycles to run using the fields on this page: 
+
+<div class="flex flex-row gap-4">
+  <Preview src={img_01} width={700} alt="" />
+</div>  
+
+Notes and recommendations: 
+1. Start the autotune procedure while the machine is at or around ambient temperature (eg, not at brewing temperature)
+1. Set a temperature target which will be close to your normal brewing temperature as a basis for the autotune.
+2. More cycles is not always better. If you're unsure, use the default setting of 10 cycles.
+
+When you're satisfied with the values you've entered, click on the Start button. You can view the status of the tuning procedure using the graph that appears - a 'cycle' is each time the temperature goes above and then below the set temperature.
+<div class="flex flex-row gap-4">
+  <Preview src={img_02} width={700} alt="" />
+</div>
+
+It is recommended that you leave this page open for the duration of the autotune procedure - if you chose the default cycle value of 10 it will take approximately 10-15 minutes.
+
+When the autotune procedure is completed, the resultant values will be shown on your screen. They'll also be automatically added to your GaggiMate settings - no manual intervention required.
+
+<div class="flex flex-row gap-4">
+  <Preview src={img_03} width={700} alt="" />
+  <Preview src={img_04} width={700} alt="" />
+</div>  

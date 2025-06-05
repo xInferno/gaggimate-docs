@@ -1,0 +1,44 @@
+---
+layout: ../../layouts/Layout.astro
+title: First Start
+description: Initial configuration of your new GaggiMate-enabled machine!
+section: Usage
+order: 15
+---
+
+import Preview from '../../components/Preview.astro';
+import img_01 from '../../assets/images/first-start/wifi_qrcode.png';
+
+So you flashed and installed your GaggiMate kit into your machine, and you've turned the machine on for the first time. You may have even brewed a coffee using the default brewing settings.
+
+To really get the most out of the machine, you'll want to perform some additional configuration to enable all of the advanced features that GaggiMate has to offer.
+
+Here's what to do next!
+
+### WiFi Setup
+
+The first time you turn on your GaggiMate-equipped machine, it will display the standby screen - this will include a clock, the GaggiMate logo, and a bluetooth icon on top. Since this is the first time GaggiMate has been started, it will not be connected to your local WiFi network (the WiFi icon up top will be absent).
+
+GaggiMate will create a WiFi network of its own called **GaggiMate** for you to use for this initial configuration. You can either manually connect to this GaggiMate network to proceed, or you can scan the QR Code below using your phone to connect:
+
+<div class="flex justify-center w-full">
+  <Preview src={img_01} width={400} alt="" />
+</div>
+
+After connecting to the GaggiMate network, the web interface will be available by the IP address [http://4.4.4.1](http://4.4.4.1). Open a web browser and connect to this IP address. You will then be presented with GaggiMate's web interface.
+
+From here, on the left side of the page click on Settings, and scroll down to the System Preferences section.
+
+Enter your WiFi network name in the WiFi SSID section, and enter your WiFi Password in the WiFi Password section. If you want to set the hostname of your GaggiMate device as it will appear on your local network, you can enter that in the Hostname section - otherwise you can leave it at the default **gaggimate** setting.
+
+You will also want to set your timezone from the Timezone dropdown to reflect your local time.
+
+Leave the PID Values box at its default setting for now.
+
+After setting these values, click the Save and Restart button on the bottom of the page. GaggiMate will reboot, and after a few seconds you should see the standby screen again - this time with the inclusion of the WiFi icon on top. 
+
+GaggiMate is now ready for connections! 
+
+You should now be able to visit the web interface by accessing [http://gaggimate.local](http://gaggimate.local) in a web browser (you can also access GaggiMate by its IP address on your local network if mDNS isn't working).
+
+You can explore GaggiMate's WebUI on your own, or you can take a look at the [Web Interface](usage-webui) page for a more guided tour.
