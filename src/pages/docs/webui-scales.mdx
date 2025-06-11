@@ -1,0 +1,43 @@
+---
+layout: ../../layouts/Layout.astro
+title: Bluetooth Scales
+description: Connecting scales to GaggiMate via Bluetooth
+section: Web Interface
+order: 19
+---
+
+import Preview from '../../components/Preview.astro';
+import img_01 from '../../assets/images/usage-webui/webui-scales01.png';
+import img_02 from '../../assets/images/usage-webui/webui-scales02.png';
+
+
+### Bluetooth Scales
+
+Because of its built-in Bluetooth capability, GaggiMate can integrate with a number of third-party Bluetooth-enabled scales in order to perform **grind by weight** and **brew by weight** functionality. GaggiMate will automatically turn off the grinder or stop the brewing process when a target weight is reached.
+
+The current list of compatible scales includes:
+- Acaia Lunar
+- Acaia Pearl
+- Bookoo Themis
+- Decent Scale
+- Difluid Microbalance
+- Difluid TI
+- Eclair
+- Felicita Arc
+- Timemore DUO
+- Varia Aku & Aku Mini
+- Eureka Precisa With Bluetooth 
+  - Specifically models with manufacturer data starting with **0000a6bc** and a device name of **CFS-9002**
+  - If you own a Precisa you can verify if it is compatible by using a tool such as Bluesee to obtain the above information
+
+To connect your scale to GaggiMate, ensure that the scale is in pairing mode (consult your scale's documentation if you're unsure of how to do this), and then go to the Bluetooth Scales section of the WebUI. GaggiMate will automatically scan for compatible scales.
+
+<div class="flex flex-row gap-4">
+  <Preview src={img_01} width={700} alt="" />
+</div> 
+
+Once the scale appears, click on the plus sign button to pair GaggiMate with your scale. The button will turn into a check mark when pairing is successful.
+
+<div class="flex flex-row gap-4">
+  <Preview src={img_02} width={700} alt="" />
+</div> 
